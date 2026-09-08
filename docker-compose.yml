@@ -1,0 +1,15 @@
+services:
+  tutoriapp:
+    image: ghcr.io/maximated/tutoriapp:latest
+    container_name: tutoriapp
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - tutoriapp_data:/data
+    environment:
+      - PORT=3000
+      - DB_PATH=/data/tutoriapp.db
+
+volumes:
+  tutoriapp_data:
