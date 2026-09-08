@@ -4,7 +4,7 @@ services:
     container_name: tutoriapp
     restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "3003:3000"
     volumes:
       - tutoriapp_data:/data
     environment:
