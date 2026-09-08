@@ -5,9 +5,10 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci --omit=dev
 
-COPY index.html ./index.html
+COPY index.html manifest.json sw.js ./
 COPY css ./css
 COPY js ./js
+COPY icons ./icons
 COPY server ./server
 
 ENV NODE_ENV=production
